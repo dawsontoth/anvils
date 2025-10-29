@@ -1,0 +1,4 @@
+
+### OpenAPI
+// @no-log
+GET http://localhost:9952/api/openapi/rest

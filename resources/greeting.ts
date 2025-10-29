@@ -1,6 +1,6 @@
 import {Resource} from 'harperdb';
 
-export class Greeting extends Resource {
+export class greeting extends Resource {
   static loadAsInstance = false;
 
   async get() {

@@ -1,6 +1,6 @@
 ## Here we can define any tables in our database. This example shows how we define a type as a table using
 ## the type name as the table name and specifying it is an "export" available in the REST and other external protocols.
-type Product @table @export {
+type Product @table @export(name: "product") {
     id: ID @primaryKey # Every table needs a primaryKey
     name: String # And then we can add other fields!
     readyForMarket: Boolean
@@ -17,7 +17,7 @@ type Product @table @export {
     metadata: Any
 }
 
-type Review @table @export {
+type Review @table @export(name: "review") {
     id: ID @primaryKey
     productId: ID @indexed
     product: Product @relationship(from: "productId")

@@ -1,0 +1,49 @@
+
+### Reviews
+// @no-log
+// @no-auto-encoding
+GET http://localhost:9962/review/?select(id,comments,product)
+
+### Create Review 1
+// @no-log
+POST http://localhost:9962/review/
+Content-Type: application/json
+
+{
+  "id": "r1",
+  "productId": "p1",
+  "comments": "Beautiful design and smooth app integration. Worth every penny!"
+}
+
+### Create Review 2
+// @no-log
+POST http://localhost:9962/review/
+Content-Type: application/json
+
+{
+  "id": "r2",
+  "productId": "p2",
+  "comments": "Charges fast and lasts forever — took it camping and it never failed."
+}
+
+### Create Review 3
+// @no-log
+POST http://localhost:9962/review/
+Content-Type: application/json
+
+{
+  "id": "r3",
+  "productId": "p2",
+  "comments": "A bit heavy, but the dual ports are super handy for travel."
+}
+
+### Create Review 4
+// @no-log
+POST http://localhost:9962/review/
+Content-Type: application/json
+
+{
+  "id": "r4",
+  "productId": "p3",
+  "comments": "Tried the beta version — incredible sound quality and comfort!"
+}

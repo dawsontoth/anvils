@@ -1,0 +1,4 @@
+
+### Greeting
+// @no-log
+GET http://localhost:9962/greeting/
