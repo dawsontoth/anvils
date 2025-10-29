@@ -1,4 +1,5 @@
 
 ### OpenAPI
 // @no-log
-GET http://localhost:9952/api/openapi/rest
+GET {{url}}/openapi
+Authorization: Basic {{username}} {{password}}

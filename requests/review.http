@@ -2,11 +2,11 @@
 ### Reviews
 // @no-log
 // @no-auto-encoding
-GET http://localhost:9962/review/?select(id,comments,product)
+GET {{url}}/review/?select(id,comments,product)
 
 ### Create Review 1
 // @no-log
-POST http://localhost:9962/review/
+POST {{url}}/review/
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 
 ### Create Review 2
 // @no-log
-POST http://localhost:9962/review/
+POST {{url}}/review/
 Content-Type: application/json
 
 {
@@ -28,7 +28,7 @@ Content-Type: application/json
 
 ### Create Review 3
 // @no-log
-POST http://localhost:9962/review/
+POST {{url}}/review/
 Content-Type: application/json
 
 {
@@ -39,7 +39,7 @@ Content-Type: application/json
 
 ### Create Review 4
 // @no-log
-POST http://localhost:9962/review/
+POST {{url}}/review/
 Content-Type: application/json
 
 {
