@@ -1,0 +1,24 @@
+# This configuration file tells GraphQL Code Generator how
+# to generate types based on our schema.
+schema:
+  - "schema/**/*.graphql"
+  - "types/core.graphql"
+generates:
+  ./types/schema.d.ts:
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+    config:
+      useIndexSignature: true
+      scalars:
+        Any: '{ [key: string]: any }'
+        BigInt: 'number'
+        Blob: 'number[]'
+        Boolean: 'boolean'
+        Bytes: 'number[]'
+        Date: 'Date'
+        Float: 'number'
+        ID: 'string'
+        Int: 'number'
+        Long: 'number'
+        String: 'string'

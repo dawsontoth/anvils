@@ -1,9 +1,14 @@
-scalar Date
-scalar Bytes
-scalar Blob
-scalar Long
-scalar BigInt
 scalar Any
+scalar BigInt
+scalar Blob
+scalar Boolean
+scalar Bytes
+scalar Date
+scalar Float
+scalar ID
+scalar Int
+scalar Long
+scalar String
 
 directive @table(
     table: String

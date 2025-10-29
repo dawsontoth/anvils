@@ -8,9 +8,14 @@
     "start": "harperdb run .",
     "dev": "harperdb dev .",
     "login": "node scripts/login.js",
-    "deploy": "dotenv -e .env -- harperdb deploy . restart=rolling replicated=true"
+    "deploy": "dotenv -e .env -- harperdb deploy . restart=rolling replicated=true",
+    "gen:typescript": "graphql-codegen --config ./types/config.yaml"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^6.0.1",
+    "@graphql-codegen/typescript": "^5.0.2",
+    "@graphql-codegen/typescript-resolvers": "^5.1.0",
+    "@parcel/watcher": "^2.5.1",
     "dotenv-cli": "^10.0.0",
     "harperdb": "^4.7.2"
   }
