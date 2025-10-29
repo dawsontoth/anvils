@@ -13,7 +13,7 @@ generates:
       scalars:
         Any: '{ [key: string]: any }'
         BigInt: 'number'
-        Blob: 'number[]'
+        Blob: 'object'
         Boolean: 'boolean'
         Bytes: 'number[]'
         Date: 'Date'

@@ -15,7 +15,7 @@ export type Scalars = {
   Float: { input: number; output: number; }
   Any: { input: { [key: string]: any }; output: { [key: string]: any }; }
   BigInt: { input: number; output: number; }
-  Blob: { input: number[]; output: number[]; }
+  Blob: { input: object; output: object; }
   Bytes: { input: number[]; output: number[]; }
   Date: { input: Date; output: Date; }
   Long: { input: number; output: number; }

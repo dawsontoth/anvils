@@ -1,9 +1,9 @@
 import {Resource} from 'harperdb';
 
 export class greeting extends Resource {
-  static loadAsInstance = false;
+	static loadAsInstance = false;
 
-  async get() {
-    return { greeting: 'Hello, world!' };
-  }
+	async get() {
+		return { greeting: 'Hello, world!' };
+	}
 }

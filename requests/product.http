@@ -4,6 +4,11 @@
 // @no-auto-encoding
 GET http://localhost:9962/product/?select(id,name,totalPrice,reviews)
 
+### Product
+// @no-log
+// @no-auto-encoding
+GET http://localhost:9962/product/p1
+
 ### Create Product 1
 // @no-log
 POST http://localhost:9962/product/

@@ -4,15 +4,15 @@ const decrementButton = document.getElementById('decrement');
 const incrementButton = document.getElementById('increment');
 
 function updateDisplay() {
-	counterDisplay.textContent = count;
+  counterDisplay.textContent = count;
 }
 
 decrementButton.addEventListener('click', () => {
-	count--;
-	updateDisplay();
+  count--;
+  updateDisplay();
 });
 
 incrementButton.addEventListener('click', () => {
-	count++;
-	updateDisplay();
+  count++;
+  updateDisplay();
 });
