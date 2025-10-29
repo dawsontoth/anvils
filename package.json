@@ -1,0 +1,17 @@
+{
+  "name": "application-template",
+  "version": "1.0.0",
+  "description": "A template for building HarperDB applications",
+  "type": "module",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "harperdb run .",
+    "dev": "harperdb dev .",
+    "login": "node scripts/login.js",
+    "deploy": "dotenv -e .env -- harperdb deploy . restart=rolling replicated=true"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^10.0.0",
+    "harperdb": "^4.7.2"
+  }
+}
