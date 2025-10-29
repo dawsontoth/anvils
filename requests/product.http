@@ -9,6 +9,12 @@ GET http://localhost:9962/product/?select(id,name,totalPrice,reviews)
 // @no-auto-encoding
 GET http://localhost:9962/product/p1
 
+### Product
+// @no-log
+// @no-auto-encoding
+GET http://localhost:9962/product/p3
+Authorization: Basic {{username}} {{password}}
+
 ### Create Product 1
 // @no-log
 POST http://localhost:9962/product/

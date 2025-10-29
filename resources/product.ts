@@ -1,4 +1,5 @@
 import type {RequestTarget} from 'harperdb/resources/RequestTarget';
+import type {Product} from '../types/schema.ts';
 import {ProductTable, type User} from '../types/tables.ts';
 
 export class product extends ProductTable {
@@ -7,21 +8,23 @@ export class product extends ProductTable {
 	async allowRead(user: User, target: RequestTarget) {
 		if (target.id) {
 			const entity = await this.get({ ...target, checkPermission: false } as RequestTarget);
-			return entity && entity.price <= 100;
-
+			if (entity && entity.price >= 100) {
+				// Only active users can see big ticket products!
+				return !!user?.active;
+			}
 		}
 		return true;
 	}
 
-	allowCreate(user, data, context) {
+	allowCreate(user: User, newData: Product, target: RequestTarget) {
 		return true;
 	}
 
-	allowUpdate(user, data, context) {
+	allowUpdate(user: User, updatedData: Product, target: RequestTarget) {
 		return true;
 	}
 
-	allowDelete(user, target) {
+	allowDelete(user: User, target: RequestTarget) {
 		return true;
 	}
 

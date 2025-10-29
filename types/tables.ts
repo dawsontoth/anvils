@@ -9,8 +9,21 @@ export const ProductTable = tables.Product as any as NarrowedTableType<Product, 
 export const ReviewTable = tables.Review as any as NarrowedTableType<Review, keyof Review>;
 
 // TODO: Expand user, allow customization?
-export interface User {
-	email?: string;
+export type User = undefined|{
+	active: boolean;
+	username: string;
+
+	role: {
+		permission: {
+			super_user?: boolean;
+			cluster_user?: boolean;
+			system: Record<string, any>;
+		}
+		role: string;
+		id: string;
+		__updatedtime__: number;
+		__createdtime__: number;
+	};
 
 	[record: string]: any;
 }
