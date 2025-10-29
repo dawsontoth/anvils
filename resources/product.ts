@@ -13,6 +13,7 @@ export class product extends ProductTable {
 				return !!user?.active;
 			}
 		}
+		// Unless it's the list call, then... I don't care... ;D
 		return true;
 	}
 

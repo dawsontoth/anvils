@@ -1,21 +1,23 @@
-import {tables} from 'harperdb';
+import type {RequestTarget} from 'harperdb/resources/RequestTarget.js';
+import type {Review} from '../types/schema.js';
+import {ReviewTable, type User} from '../types/tables.ts';
 
-export class review extends tables.Review {
+export class review extends ReviewTable {
 	static loadAsInstance = false;
 
-	public allowRead(user, target) {
+	allowRead(user: User, target: RequestTarget) {
 		return true;
 	}
 
-	public allowCreate(user, data, context) {
+	allowCreate(user: User, newData: Review, target: RequestTarget) {
 		return true;
 	}
 
-	public allowUpdate(user, data, context) {
+	allowUpdate(user: User, updatedData: Review, target: RequestTarget) {
 		return true;
 	}
 
-	public allowDelete(user, target) {
+	allowDelete(user: User, target: RequestTarget) {
 		return true;
 	}
 }
