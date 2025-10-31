@@ -1,6 +1,6 @@
-import type {RequestTarget} from 'harperdb/resources/RequestTarget';
+import type {RequestTarget, User} from 'harperdb';
 import type {Product} from '../types/schema.ts';
-import {ProductTable, type User} from '../types/tables.ts';
+import {ProductTable} from '../types/tables.ts';
 
 export class product extends ProductTable {
 	static loadAsInstance = false;

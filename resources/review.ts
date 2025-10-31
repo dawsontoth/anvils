@@ -1,6 +1,6 @@
-import type {RequestTarget} from 'harperdb/resources/RequestTarget.js';
+import type {RequestTarget, User} from 'harperdb';
 import type {Review} from '../types/schema.js';
-import {ReviewTable, type User} from '../types/tables.ts';
+import {ReviewTable} from '../types/tables.ts';
 
 export class review extends ReviewTable {
 	static loadAsInstance = false;
